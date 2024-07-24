@@ -11,14 +11,14 @@ import uploadPhoto from './5-photo-reject';
  * 'fulfilled' or 'rejected'.
  */
 export default async function handleProfileSignup(firstName, lastName, fileName) {
-	const handlePromise = (promise) => promise
-		.then((result) => ({ status: 'fulfilled', value: result }))
-		.catch((error) => ({ status: 'rejected', error: `Error: ${error.message}` }));
+  const handlePromise = (promise) => promise
+    .then((result) => ({ status: 'fulfilled', value: result }))
+    .catch((error) => ({ status: 'rejected', error: `Error: ${error.message}` }));
 
-	const promises = [
-		handlePromise(signUpUser(firstName, lastName)),
-		handlePromise(uploadPhoto(fileName)),
-	];
+  const promises = [
+    handlePromise(signUpUser(firstName, lastName)),
+    handlePromise(uploadPhoto(fileName)),
+  ];
 
-	return Promise.all(promises);
+  return Promise.all(promises);
 }
