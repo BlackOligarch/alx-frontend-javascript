@@ -1,8 +1,8 @@
 /**
  * Retrieves a list of students.
  *
- * This function returns an array matrix of student objects with their id, first
- * name, and location.
+ * This function returns an array matrix of student objects with their id,
+ * first name, and location.
  *
  * @returns {Array} An array of student objects.
  */
